@@ -1,4 +1,4 @@
-from ANNIEMUSIC import app
+from AnonXMusic import app
 from pyrogram import filters
 from pyrogram.errors import RPCError
 from pyrogram.types import ChatMemberUpdated, InlineKeyboardMarkup, InlineKeyboardButton
@@ -17,7 +17,7 @@ from pyrogram.enums import ParseMode
 from pyrogram import *
 from pyrogram.types import *
 from logging import getLogger
-from ANNIEMUSIC.utils.jarvis_ban import admin_filter
+from AnonXMusic.utils.jarvis_ban import admin_filter
 from PIL import ImageChops
 
 LOGGER = getLogger(__name__)
@@ -74,7 +74,7 @@ def welcomepic(pic, user, chatname, id, uname):
 
 @app.on_message(filters.command("wel") & ~filters.private)
 async def auto_state(_, message):
-    usage = "**Usage:**\n⦿/wel [on|off]\n➤ANNIE SPECIAL WELCOME.........."
+    usage = "**Usage:**\n⦿/wel [Oɴ | Oғғ]\n➤𝚈ᴏʀ'𝚜 𝚂ᴘᴇᴄɪᴀʟ 𝚆ᴇʟᴄᴏᴍᴇ.........."
     if len(message.command) == 1:
         return await message.reply_text(usage)
     chat_id = message.chat.id
@@ -140,6 +140,7 @@ async def greet_new_member(_, member: ChatMemberUpdated):
                 caption=f"""
 **❅────✦ᴡᴇʟᴄᴏᴍᴇ ᴛᴏ✦────❅
 {member.chat.title}
+ɴᴏᴡ ᴍᴀᴋᴇ ɴᴇᴡ ғʀɪᴇɴᴅs 💗ᴀɴᴅ sᴛᴀʏ ᴀᴄᴛɪᴠᴇ😉
 ▰▰▰▰▰▰▰▰▰▰▰▰▰
 ➻ Nᴀᴍᴇ ✧ {user.mention}
 ➻ Iᴅ ✧ {user.id}

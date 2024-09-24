@@ -6,7 +6,7 @@ from gtts import gTTS
 import requests
 from pyrogram import filters
 from pyrogram.enums import ChatAction, ParseMode
-from ANNIEMUSIC import app
+from AnonXMusic import app
 import g4f
 from langdetect import detect
 from googletrans import Translator

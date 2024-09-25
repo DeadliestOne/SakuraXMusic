@@ -81,7 +81,7 @@ async def chat_bots(_, m: t.Message):
     if media is not None:
         return await ask_about_image(_, m, [media], prompt)
     if prompt is None:
-        return await m.reply_text("ʟᴏᴠᴇ ʏᴏᴜ ʙᴀʙᴇ "ᴡᴀɴɴᴀ ʙᴇ ʏᴏᴜʀs"💓")
+        return await m.reply_text("ʟᴏᴠᴇ ʏᴏᴜ ʙᴀʙᴇ **ᴡᴀɴɴᴀ ʙᴇ ʏᴏᴜʀs**💓")
     model = m.command[0].lower()
     output = await chat_completion(prompt, model)
     if model == "bard":

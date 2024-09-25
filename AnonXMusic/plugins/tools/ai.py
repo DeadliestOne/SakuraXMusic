@@ -74,14 +74,14 @@ def get_text(message: t.Message) -> Union[str, None]:
         return None
 
 
-@app.on_message(filters.command(["bard", "gpt", "llama", "mistral", "palm", "gemini"]))
+@app.on_message(filters.command(["hello", "babe", "llama", "mistral", "palm", "gemini"]))
 async def chat_bots(_, m: t.Message):
     prompt = get_text(m)
     media = get_media(m)
     if media is not None:
         return await ask_about_image(_, m, [media], prompt)
     if prompt is None:
-        return await m.reply_text("Hello, how can I assist you today?")
+        return await m.reply_text("ʟᴏᴠᴇ ʏᴏᴜ ʙᴀʙᴇ "ᴡᴀɴɴᴀ ʙᴇ ʏᴏᴜʀs"💓")
     model = m.command[0].lower()
     output = await chat_completion(prompt, model)
     if model == "bard":
